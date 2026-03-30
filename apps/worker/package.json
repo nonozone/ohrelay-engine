@@ -1,0 +1,14 @@
+{
+  "name": "@ohrelay/worker",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@ohrelay/shared": "workspace:*"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc -p tsconfig.json"
+  }
+}
+

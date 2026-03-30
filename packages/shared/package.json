@@ -1,0 +1,17 @@
+{
+  "name": "@ohrelay/shared",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "zod": "^4.1.11"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  }
+}
+
