@@ -26,9 +26,10 @@ This repository exists to make those core mechanisms reviewable in public.
 
 - shared normalization and SMTP error primitives in `packages/shared`
 - worker-side forwarding and ingest behavior in `apps/worker`
+- standalone engine helpers for MIME rewriting, identity resolution, SMTP credential crypto, and outbound delivery in `apps/engine`
 - engine-safe schema history in `database/migrations`
 
-This first public snapshot is intentionally small. It establishes a clean public history and a clear open-source boundary before the larger engine package is imported.
+This public snapshot is still intentionally narrow, but it now includes the first standalone engine extraction in addition to the worker/shared foundations.
 
 ## Current Contents
 
@@ -39,7 +40,7 @@ This first public snapshot is intentionally small. It establishes a clean public
 - `database/migrations`
   Engine-safe schema migrations only (`0001` through `0010`).
 - `apps/engine`
-  Placeholder for the engine package that will be extracted next.
+  Standalone engine helpers for reply restoration, MIME rewriting, SMTP credential crypto, trace-id creation, and raw-email delivery adapters.
 
 ## What Is Intentionally Not Included Yet
 
@@ -68,7 +69,7 @@ What is done:
 
 What comes next:
 
-- import the standalone engine package
+- import the remaining engine-only runtime pieces
 - publish a tighter privacy/data-flow document tied to the imported engine code
 - add a minimal self-hosted example for the public repository
 

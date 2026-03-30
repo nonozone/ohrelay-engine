@@ -10,6 +10,10 @@ These parts are already public because they are close to the mail-processing tru
 - SMTP error primitives
 - worker ingest client
 - worker metadata extraction and verification code sniffing
+- engine MIME rewriting and thread header parsing
+- reply identity resolution
+- SMTP credential encryption helpers
+- raw-email delivery adapters for SMTP, Resend SMTP, and SES
 - engine-safe schema migrations
 
 ## Excluded For Now
@@ -24,12 +28,11 @@ These parts remain private because they are product-layer concerns, not required
 
 ## Planned Next
 
-The next public import should bring in the standalone engine package:
+The next public import should extend the standalone engine package with the runtime pieces that still depend on engine-only infrastructure:
 
-- standalone engine package
 - engine HTTP routes
-- inbound/outbound event recording code
-- SMTP submission and reply identity logic
+- inbound/outbound event recording repositories
+- SMTP submission runtime and provider selection wiring
 
 ## Boundary Rule
 

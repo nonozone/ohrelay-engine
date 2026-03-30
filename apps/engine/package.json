@@ -1,0 +1,18 @@
+{
+  "name": "@ohrelay/engine",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.913.0",
+    "@ohrelay/shared": "workspace:*",
+    "nodemailer": "^7.0.13"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  }
+}

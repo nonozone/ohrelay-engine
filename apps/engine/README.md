@@ -1,15 +1,19 @@
 # apps/engine
 
-This directory is reserved for the standalone engine extraction.
+Standalone engine package for the public OhRelay trust boundary.
 
-The next import pass should move in the engine-only runtime:
+This first extraction batch includes:
 
-- SMTP submission handling
-- reply identity resolution
 - MIME rewriting
-- outbound delivery providers
-- engine HTTP routes
-- engine-safe migration runner
+- thread-header extraction
+- reply identity resolution
+- SMTP password encryption helpers
+- outbound trace-id generation
+- raw-email delivery adapters for SMTP, Resend SMTP, and SES
 
-It intentionally stays out of the workspace until those imports are detached from private control-plane code.
+Still intentionally excluded in this batch:
 
+- database repositories
+- HTTP routes and runtime wiring
+- SMTP submission server runtime
+- control-plane integrations
